@@ -9,7 +9,7 @@ let currentStep = 0;
 // Load GeoJSON data from file
 $.ajax({
     type: 'GET',
-    url: '/epci_ml.geojson',
+    url: 'https://brooks-code.github.io/silver-broccoli/epci_ml.geojson',
     dataType: 'json',
     success: function (data) {
         geoJsonData = data; // Store the GeoJSON data in a variable
