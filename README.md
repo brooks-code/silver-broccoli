@@ -13,6 +13,32 @@ The project is a JS data visualization application built using Leaflet.js and jQ
 
 The application is inspired by interactive visualizations seen in various investigations published by some newspapers data-journalism desks (Washington Post, The Guardian, Le Monde..). The main goal is to provide a narrative-friendly experience allowing users to navigate through different visualization states, each showcasing particular aspects of the data with the possibility to explore some of the data more in detail.
 
+## Table of Content
+
+<details>
+<summary> Contents - click to expand</summary>
+
+- [ATMO-Viz](#atmo-viz)
+    - [Inspiration](#inspiration)
+  - [Table of Content](#table-of-content)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Main Methods](#main-methods)
+  - [Usage](#usage)
+  - [Limitations](#limitations)
+  - [Troubleshooting](#troubleshooting)
+  - [Data-Curious?](#data-curious)
+  - [Further learning](#further-learning)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+      - [Design](#design)
+
+</details>
+
 ## Demo
 
 The live demo is available [here](https://brooks-code.github.io/silver-broccoli/test.html)!
@@ -92,7 +118,7 @@ If you are a Visual Studio Code user, you can easily test the app *locally*:
 ```json
 {
   "FILE": {
-    // Modify the line below
+    "comments": "Modify the line below"
     "path": "/path/to/your/geojson_file.geojson"
   },
   "MAP_INITIAL": {
@@ -194,7 +220,7 @@ The `config.json` file should include:
 Replace the placeholder values with your actual data and settings or use the preconfigured file available in the repository.
 </details>
 
-## Main  Methods
+## Main Methods
 
     initialize(): sets up the visualization.
     setupLayers(): configures map layers.
