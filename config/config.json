@@ -1,0 +1,80 @@
+{
+  "FILE": {
+    "path": "https://brooks-code.github.io/silver-broccoli/data/epci_ml.geojson"
+  },
+  "MAP_INITIAL": {
+    "center": [48.5, 6.0],
+    "zoom": 8,
+    "zoomControl": false
+  },
+  "TILE_LAYER": {
+    "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "options": {
+      "attribution": "&copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a>",
+      "subdomains": ["a", "b", "c"],
+      "opacity": 0.5
+    }
+  },
+  "COLORS": {
+    "ZONE": {
+      "Rural autonome": "#969696",
+      "Rural périurbain": "#525252",
+      "Urbain": "#252525"
+    },
+    "CONSUMPTION": {
+      "LOW": "#9ecae1",
+      "MEDIUM": "#6baed6",
+      "HIGH": "#3182bd"
+    },
+    "PRODUCTION": {
+      "NONE": "#fdd0a2",
+      "LOW": "#fd8d3c",
+      "MEDIUM": "#d94801",
+      "HIGH": "#a50f15"
+    },
+    "RATIO_ENR": {
+      "VERY_LOW": "#f7fcb9",
+      "LOW": "#d9f0a3",
+      "MEDIUM": "#78c679",
+      "HIGH": "#238443",
+      "VERY_HIGH": "#00441b"
+    },
+    "DEFAULT": "black"
+  },
+  "OPACITY": {
+    "FILL_OPACITY": 0.4,
+    "DEFAULT": 0.5,
+    "LOWER": 0.3
+  },
+  "THRESHOLDS": {
+    "CONSUMPTION": {
+      "CONSO": [421000, 665000],
+      "CAPITA": [26, 40]
+    },
+    "PRODUCTION": {
+      "BIO": [10, 9904, 55324],
+      "EOLIEN": [10, 45500, 55077],
+      "GEO": [15300, 23240, 36170],
+      "HYDRO": [10, 45, 2050],
+      "OTHER": [4980, 79350, 129500],
+      "SOLAIRE": [1960, 3730, 8155],
+      "PROD": [115000, 175000, 300000]
+    },
+    "RATIO_ENR": [17, 23, 37, 100]
+  },
+  "SELECTORS": {
+    "TEXTS": [
+      "#intro-text",
+      "#presentation-text",
+      "#transition-text",
+      "#heatmap-text",
+      "#ratioenr-text",
+      "#production-text"
+    ],
+    "MAP": "#map",
+    "BUTTONS": {
+      "NEXT": "#next-button",
+      "PREV": "#prev-button"
+    }
+  }
+}
