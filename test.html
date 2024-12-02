@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="ATMO-viz: Explore the energy consumption and production of the Grand-Est region through interactive data visualizations.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Hello ATMO-viz!</title>
+  <style>
+    @import url("https://fonts.cdnfonts.com/css/raleway-5");
+  </style>
+  <link rel="stylesheet" href="https://brooks-code.github.io/silver-broccoli/stylesheet/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <main>
+    <section id="map" aria-label="Map of the region"></section>
+    <nav id="footer" role="navigation">
+      <button id="prev-button" disabled aria-label="Previous" aria-disabled="true">◀</button>
+      <button id="next-button" aria-label="Next">▶</button>
+    </nav>
+
+    <article id="intro-text" role="definition" aria-label="Description of the visualization">
+      <h1>ATMO-viz</h1>
+      <p lang="fr">
+        Que pouvons nous déduire de ce territoire découpé en 150 regroupements
+        de communes? Vous allez pouvoir le découvrir grâce à plusieurs
+        visualisations qui mettent en valeur des données relatives à l'énergie
+        de la région Grand-Est.
+      </p>
+      <p lang="fr">Avant toute conclusion, découvrons ensemble ce territoire.</p>
+      <p lang="fr">
+        Vous pouvez zoomer en utilisant les touches ⊕ et ⊖ de votre clavier et
+        déposer un marqueur en cliquant sur le territoire d'intérêt.
+      </p>
+    </article>
+    <article id="presentation-text" role="definition" aria-label="Description of the visualization">
+      <h2 lang="fr">Le territoire</h2>
+      <p lang="fr">
+        Ce découpage territorial, en zones
+        <span style="color: #252525">urbaines (le plus foncé)</span>,
+        <span style="color: #525252">périurbaines</span> et
+        <span style="color: #969696">rurales</span> permet de prendre en compte
+        la densité de population. La visualisation suivante complète celle-ci et
+        permet d'observer la part de population régionale que représente chaque
+        intercommune.
+      </p>
+    </article>
+    <article id="transition-text" role="definition" aria-label="Description of the visualization">
+      <p lang="fr">
+        Avant de visualiser les données de consommation, penchons nous
+        rapidement sur les données de population.
+      </p>
+    </article>
+    <article id="heatmap-text" role="definition" aria-label="Description of the visualization">
+      <h2 lang="fr">Consommation</h2>
+      <p lang="fr">
+        Cette visualisation représente sous forme de carte thermique (heatmap)
+        la consommation énergétique totale pour l'année 2022. Cette
+        représentation graphique permet d'identifier rapidement les zones les
+        plus consommatrices d'énergie et peut être utile pour analyser la
+        répartition géographique de la demande énergétique. Attention toutefois,
+        cette information est à relativiser avec la consommation annuelle par
+        habitant que vous pouvez découvrir en survolant chaque territoire.
+      </p>
+      <p lang="fr">
+        Les zones sont colorées en fonction de la valeur de cette consommation,
+        avec une échelle allant du plus clair pour les 25% des plus
+        <span style="color: #9ecae1">faibles territoires consommateurs</span>,
+        au plus foncé correspondant au 25% des plus
+        <span style="color: #3182bd">gros consommateurs</span>. Les autres
+        territoires sont de nuance
+        <span style="color: #6baed6">intermédiaire.</span>
+      </p>
+    </article>
+    <article id="ratioenr-text" role="definition" aria-label="Description of the visualization">
+      <h2 lang="fr">Part d'énergies renouvelables</h2>
+      <p lang="fr">
+        La carte précédente a permis de visualiser la consommation énergétique
+        2022 en valeurs absolues et relatives. Quelle est la part des énergies
+        renouvelables dans cette consommation?<br />
+        L'analyse de cette carte permettra de cibler des zones prioritaires afin
+        de mettre en place des politiques visant à réduire l'empreinte
+        environnementale de ces territoires.
+      </p>
+      <p lang="fr">
+        Les territoires excédentaires son représentés en
+        <span style="color: #00441b">vert foncé </span>(part supérieure à 100).
+        Les ratios inférieurs à 17 sont en blanc cassé, ceux entre
+        <span style="color: #78c679">17 et 23</span>,
+        <span style="color: #45b39d">23 et 37</span> et de
+        <span style="color: #238443">37 à 100</span> sont proposés avec ces
+        gradients.
+      </p>
+      <p lang="fr">
+        <br />
+        <a
+          href="https://www.agape-lorrainenord.eu/fileadmin/user_upload/publications/zoom_sur/202403_AGAPE_zoom_sur_ratio_ENR.pdf">Plus
+          d'infos</a>
+        sur l'indicateur.
+      </p>
+    </article>
+    <article id="production-text" role="definition" aria-label="Description of the visualization">
+      <h2 lang="fr">Production</h2>
+      <p lang="fr">
+        Cette visualisation qui permet de visualiser les différentes données de
+        production d'énergie (2022) avec, pour chaque moyen de production, les
+        valeurs très basses (en blanc cassé),
+        <span style="color: #fd8d3c">basses</span>,
+        <span style="color: #d94801">élevées</span> et
+        <span style="color: #a50f15">les plus élevées</span>.<br />
+        En bonus, obtenu avec un algorithme d'IA : les prévisions 2025 (pour le
+        total uniquement) qui s'afficheront au survol de chaque territoire.
+      </p>
+    </article>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://brooks-code.github.io/silver-broccoli/atmo-viz.js"></script>
+  </main>
+</body>
+
+</html>
