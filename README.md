@@ -13,10 +13,6 @@ The project is a JS data visualization application built using Leaflet.js and jQ
 
 The application is inspired by interactive visualizations seen in various investigations published by some newspapers data-journalism desks (Washington Post, The Guardian, Le Monde..). The main goal is to provide a narrative-friendly experience allowing users to navigate through different visualization states, each showcasing particular aspects of the data with the possibility to explore some of the data more in detail.
 
-## Table of contents
-
-[[toc]]
-
 ## Demo
 
 The live demo is available [here](https://brooks-code.github.io/silver-broccoli/test.html)!
@@ -96,7 +92,7 @@ If you are a Visual Studio Code user, you can easily test the app *locally*:
 ```json
 {
   "FILE": {
-    // <!-- Modify the line below --> 
+    // Modify the line below
     "path": "/path/to/your/geojson_file.geojson"
   },
   "MAP_INITIAL": {
@@ -229,15 +225,15 @@ If you only see the bottom navigation bar and the map is not appearing:
 
 ## Data-Curious?
 
-This app wouldn't be without some data processing. You can find more information about the process (soon). The documentaion outlines the steps involved in exploring and transforming the provided data to bring you this interactive storytelling experience.
+This app wouldn't be without some data processing. You can find more information about the process *(soon)*. The documentaion outlines the steps involved in exploring and transforming the provided data to bring you this interactive storytelling experience.
 
 ## Further learning
 
-A tutorial about some elements of this project will be available soon.
+A tutorial about some elements of this project will be available *soon*.
 
 Challenge: I've put quit a lot of energy to implement the good practices I'm aware of, and this makes me even more eager to learn and improve.
 
-I'm pretty sure a lot can be optimized, so I've had this idea where you can step in. Let's call it the ReFacto Challenge: feel free to improve the app's performance, scalability, and maintainability. Tackle the ReFacto challenge and share your optimizations. More about it soon.
+I'm pretty sure a lot can be optimized, so I've had this idea where you can step in. Let's call it the ReFacto Challenge: feel free to improve the app's performance, scalability, and maintainability. Tackle the ReFacto challenge and share your optimizations. *More about it soon*.
 
 ## Contributing
 
