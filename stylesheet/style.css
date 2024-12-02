@@ -1,0 +1,281 @@
+/* CSS Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+
+:root {
+    --primary-color: #ecf0f3;
+    --secondary-color: #d1d9e6;
+    --background-color: #f0f0f0;
+    --text-color: #394a56;
+}
+
+/* Global Styles */
+
+body,
+html {
+    font-family: Raleway, Verdana, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+/* Text Containers */
+
+article {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    width: 20%;
+    text-align: justify;
+    transform: translateY(-50%);
+    background-color: var(--background-color);
+    padding: 20px;
+    display: none;
+    z-index: 4;
+    opacity: 0.8;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  legend {
+    display: none;
+  }
+
+/* Map */
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+/* Footer */
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 10px;
+    text-align: center;
+    z-index: 3;
+    opacity: 0.6;
+}
+
+/* Tooltip */
+
+.custom-tooltip {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Leaflet Map Pane Style */
+
+.leaflet-map-pane {
+    z-index: 1;
+}
+
+/* Radio Groups */
+
+.radiogroup {
+    padding: 16px 64px;
+    border-radius: 16px;
+    background: var(--primary-color);
+    box-shadow: 4px 4px 4px 0px var(--secondary-color) inset, -4px -4px 4px 0px #ffffff inset;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+/* Radio Buttons */
+
+.state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 1e-5;
+    pointer-events: none;
+}
+
+.label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.text {
+    margin-left: 4px;
+    opacity: 0.6;
+    transition: opacity 0.2s linear, transform 0.2s ease-out;
+}
+
+.indicator {
+    position: relative;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px var(--secondary-color);
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.indicator::before,
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+}
+
+.indicator::before {
+    box-shadow: -4px -2px 4px 0px var(--secondary-color), 4px 2px 8px 0px #fff;
+}
+
+.indicator::after {
+    background-color: var(--primary-color);
+    box-shadow: -4px -2px 4px 0px #fff, 4px 2px 8px 0px var(--secondary-color);
+    transform: scale3d(1, 1, 1);
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.state:checked~.label .indicator::after {
+    transform: scale3d(0.975, 0.975, 1) translate3d(0, 10%, 0);
+    opacity: 0;
+}
+
+.state:focus~.label .text {
+    transform: translate3d(8px, 0, 0);
+    opacity: 1;
+}
+
+.label:hover .text {
+    opacity: 1;
+}
+
+/* Toggle Button */
+
+.population-toggle {
+    position: fixed;
+    bottom: 60px;
+    left: 10px;
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0px var(--secondary-color) inset, -4px -4px 4px 0px #ffffff inset;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0.8;
+  }
+  
+  .population-toggle input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .population-toggle input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .population-toggle input[type="checkbox"]:checked::before {
+    left: 22px;
+    background-color: var(--text-color)
+  }
+  
+  .population-toggle label {
+    font-size: 14px;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  
+
+/* Footer Button Styles */
+
+#footer button {
+    background-color: var(--primary-color);
+    border: none;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0px var(--secondary-color) inset, -4px -4px 4px 0px #ffffff inset;
+}
+
+#footer button:hover {
+    background-color: #cccccc;
+}
+
+#footer button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#footer button:active {
+    animation: button-click 0.2s ease-in-out;
+    background-color: #f7f7f7;
+}
+
+/* Button Click Animation */
+
+@keyframes button-click {
+    0% {
+        transform: scale(1);
+        background-color: var(--primary-color);
+    }
+
+    50% {
+        transform: scale(0.9);
+        background-color: #f7f7f7;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: var(--primary-color);
+    }
+}
