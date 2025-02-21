@@ -1,6 +1,6 @@
 {
   "FILE": {
-    "path": "https://brooks-code.github.io/silver-broccoli/data/epci_ml.geojson"
+    "path": "processed_data/epci_ml.geojson"
   },
   "MAP_INITIAL": {
     "center": [48.5, 6.0],
