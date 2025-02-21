@@ -251,7 +251,7 @@ If you only see the bottom navigation bar and the map is not appearing:
 
 ## Data-Curious?
 
-This app wouldn't be without some data processing. You can find more information about the process *(soon)*. The documentaion outlines the steps involved in exploring and transforming the provided data to bring you this interactive storytelling experience.
+This app wouldn't be without some data processing. You can find more information about the process in the processing folder's [readme](/processing/README.md). The documentation outlines the steps involved in exploring and transforming the provided data to bring you this interactive storytelling experience.
 
 ## Further learning
 
