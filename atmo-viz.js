@@ -35,7 +35,7 @@ async function init() {
    * @property {object} OPACITY - The opacity settings for the visualization, including the opacity for the map, layers, and visualization settings.
    * @property {object} THRESHOLDS - The threshold settings for the visualization, including the threshold values and colors.
    */
-  const config = await (await fetch("https://brooks-code.github.io/silver-broccoli/config/config.json")).json();
+  const config = await (await fetch("./config/config.json")).json();
 
   /**
    * Represents the state of the visualization.
