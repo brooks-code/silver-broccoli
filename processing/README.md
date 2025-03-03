@@ -86,7 +86,7 @@ The script processes three types of data from the original datasets:
 
 1. A dictionary maps various categories (e.g., "Solaire photovoltaïque" to "solaire") to ensure consistency.
 2. Load JSON data for ratios, consumption, and production.
-3. Process each type of data into DataFrames ([details below](#main-methods)).
+3. Process each type of data into DataFrames ([details below](#functions-overview)).
 4. Merge the processed DataFrames into a single DataFrame.
 5. Update the GeoJSON data with the merged DataFrame.
 6. Save the processed and updated data to file.
