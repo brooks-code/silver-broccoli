@@ -255,7 +255,7 @@ This app wouldn't be without some data processing. You can find more information
 
 ## Further learning
 
-A tutorial about some elements of this project will be available *soon*.
+This project inspired a tutorial about state machines: it is available [here](https://dev.to/atomictangerline/the-curious-case-of-the-visualization-state-machine-b8p).
 
 Challenge: I've put quit a lot of energy to implement the good practices I'm aware of, and this makes me even more eager to learn and improve.
 
